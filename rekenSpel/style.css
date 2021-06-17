@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap%22");
+
+body {
+  background-color: #2c3238;
+  font-family: "Montserrat", sans-serif;
+}
+
+#container {
+  width: 30em;
+  height: 15em;
+  margin: auto;
+  margin-top: 10em;
+  padding: 1em;
+  border-radius: 8px;
+  background: white;
+}
+
+#opgaveblad {
+  text-align: center;
+  height: 4em;
+  padding: 20px;
+  font-size: large;
+}
+
+#antwoordenblad {
+  text-align: center;
+}
+
+.credits {
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 2em;
+  font-size: 0.8em;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.knop {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
