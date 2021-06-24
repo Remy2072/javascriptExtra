@@ -4,6 +4,10 @@ const opgaveblad = document.getElementById("opgaveblad");
 const input1 = document.getElementById("input1");
 const execButton = document.getElementById("execButton");
 const container = document.getElementById("container");
+foutshow = document.getElementById("showfout");
+goedshow = document.getElementById("showgoed");
+let fout = 0;
+let goed = 0;
 
 maakOpgave();
 
@@ -14,18 +18,26 @@ function maakOpgave() {
   opgaveblad.innerHTML = getalA + " x " + getalB;
 }
 
-execButton.addEventListener("click", checkAntwoord);
+// execButton.addEventListener("click", checkAntwoord);
 
-function checkAntwoord() {
-  jouwAntwoord = input1.value;
-  if (antwoord == jouwAntwoord) {
-    goedFout = true;
-    container.style.background = "lightgreen";
-  } else {
-    goedFout = false;
-    container.style.background = "crimson";
+input1.addEventListener("keydown", checkAntwoord);
+
+function checkAntwoord(evt) {
+  if (evt.key == "Enter") {
+    jouwAntwoord = input1.value;
+    if (antwoord == jouwAntwoord) {
+      goedFout = true;
+      goed += 1;
+      goedshow.innerHTML = "Goed: " + goed;
+      container.style.background = "lightgreen";
+    } else {
+      goedFout = false;
+      fout += 1;
+      foutshow.innerHTML = "Fout: " + fout;
+      container.style.background = "crimson";
+    }
+    setTimeout(wachten, 2000);
   }
-  setTimeout(wachten, 2000);
 }
 
 function wachten() {
